@@ -23,14 +23,14 @@ CORS(app)
 # ----------------------------
 # 2. Configure Gemini
 # ----------------------------
-GEMINI_API_KEY = "AIzaSyCr6G_PRKzSxPqpn5tBms_-IVnTvyY8fBI"
+GEMINI_API_KEY = "AIzaSyB5R5817RKUlKViGQmujgWOsh09vNuVcmY"
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel("gemini-2.5-pro")
 
 # ----------------------------
 # 3. Load IMAGE MODEL
 # ----------------------------
-MODEL_PATH = r"C:\Users\Mathan\Desktop\int\checkpoint-100"
+MODEL_PATH = r"C:\Users\Mathan\Desktop\int\checkpoint-1025"
 DATA_DIR = r"C:\Users\Mathan\Desktop\int\Multimodal_images"
 
 print("Loading image classification model...")
@@ -49,7 +49,7 @@ print("✅ Image classification model loaded successfully!")
 # ----------------------------
 # 4. Load BIOBERT MODEL
 # ----------------------------
-BIOBERT_PATH = r"C:\Users\Mathan\Desktop\int\checkpoint-183"
+BIOBERT_PATH = r"C:\Users\Mathan\Desktop\int\fine_tuned_bioclinicalbert"
 
 print("Loading BioBERT model...")
 tokenizer = AutoTokenizer.from_pretrained(BIOBERT_PATH)

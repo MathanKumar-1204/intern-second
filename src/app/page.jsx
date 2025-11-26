@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DoctorDashboard from './pages/DoctorDashboard';
-import PatientChat from './pages/PatientChat';
+import PatientPage from './pages/PatientDashboard'; // This is the correct path
 
 function AppContent() {
   const { user, profile, loading } = useAuth();
@@ -13,8 +13,14 @@ function AppContent() {
 
   useEffect(() => {
     if (!loading && user && profile) {
-      setCurrentPage('landing');
+      // If user is logged in, default to their dashboard
+      if (profile.role === 'doctor') {
+        setCurrentPage('doctor-dashboard');
+      } else if (profile.role === 'patient') {
+        setCurrentPage('patient-dashboard');
+      }
     } else if (!loading && !user) {
+      // If user is not logged in, show landing, login, or signup
       if (currentPage !== 'login' && currentPage !== 'signup') {
         setCurrentPage('landing');
       }
@@ -32,14 +38,19 @@ function AppContent() {
     );
   }
 
+  // --- Authenticated Routes ---
   if (user && profile) {
-    if (profile.role === 'doctor') {
+    if (profile.role === 'doctor' || currentPage === 'doctor-dashboard') {
       return <DoctorDashboard />;
-    } else if (profile.role === 'patient') {
-      return <PatientChat />;
     }
+    if (profile.role === 'patient' || currentPage === 'patient-dashboard') {
+      return <PatientPage />;
+    }
+    // Fallback for authenticated user with no role page
+    return <LandingPage onNavigate={setCurrentPage} />;
   }
 
+  // --- Public Routes ---
   if (currentPage === 'login') {
     return <LoginPage onBack={() => setCurrentPage('landing')} />;
   }

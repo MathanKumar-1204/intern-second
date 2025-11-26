@@ -1,0 +1,27 @@
+Condition,Symptoms,Severity
+dry scalp,Symptoms related to dry scalp.,Low
+skin dryness,Symptoms related to skin dryness.,Low
+skin irritation,Symptoms related to skin irritation.,Low
+skin rash,Symptoms related to skin rash.,Low
+lip swelling,Symptoms related to lip swelling.,Low
+mouth ulcers,Symptoms related to mouth ulcers.,Low
+eye redness,Symptoms related to eye redness.,Low
+itchy eyelid,Symptoms related to itchy eyelid.,Low
+ringworm,Symptoms related to ringworm.,Medium
+athlete foot,Symptoms related to athlete foot.,Medium
+nail fungus,Symptoms related to nail fungus.,Medium
+impetigo,Symptoms related to impetigo.,Medium
+hand lump,Symptoms related to hand lump.,Medium
+foot swelling,Symptoms related to foot swelling.,Medium
+neck swelling,Symptoms related to neck swelling.,Medium
+knee swelling,Symptoms related to knee swelling.,Medium
+edema,Symptoms related to edema.,Medium
+cyanosis,Symptoms related to cyanosis.,Medium
+swollen eye,Symptoms related to swollen eye.,Medium
+cellulitis,Symptoms related to cellulitis.,High
+chickenpox,Symptoms related to chickenpox.,High
+shingles,Symptoms related to shingles.,High
+cutaneous larva migrans,Symptoms related to cutaneous larva migrans.,High
+eye inflammation,Symptoms related to eye inflammation.,High
+skin growth,Symptoms related to skin growth.,High
+swollen tonsils,Symptoms related to swollen tonsils.,High

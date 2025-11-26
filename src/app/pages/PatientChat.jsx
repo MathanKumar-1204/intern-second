@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { LogOut, Send, Image as ImageIcon, Bot, User } from 'lucide-react';
